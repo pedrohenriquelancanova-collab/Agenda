@@ -19,12 +19,12 @@ public class Tela_SobreoSoftware extends javax.swing.JPanel {
     public Tela_SobreoSoftware() {
         initComponents();
         
-        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.jpeg");
-        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeAdicionar.jpeg");
+        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.png");
+        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeCadastro.png");
         java.net.URL iconeContato = getClass().getResource("/imagens/iconeContato.jpg");
-        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.jpeg");
-        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.jpeg");
-        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.jpeg");
+        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.png");
+        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.png");
+        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.png");
 
         if (caminhoImg != null) {
             ImageIcon icone = new ImageIcon(caminhoImg);
@@ -178,7 +178,7 @@ public class Tela_SobreoSoftware extends javax.swing.JPanel {
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        setBackground(new java.awt.Color(248, 250, 252));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 650));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -186,7 +186,7 @@ public class Tela_SobreoSoftware extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel8.setText("Sobre o Software");
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
         jPanel4.setForeground(new java.awt.Color(51, 153, 255));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

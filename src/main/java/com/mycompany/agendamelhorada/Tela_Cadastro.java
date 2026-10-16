@@ -32,12 +32,12 @@ public class Tela_Cadastro extends javax.swing.JPanel {
 
         }
 
-        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.jpeg");
-        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeAdicionar.jpeg");
+        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.png");
+        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeCadastro.png");
         java.net.URL iconeContato = getClass().getResource("/imagens/iconeContato.jpg");
-        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.jpeg");
-        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.jpeg");
-        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.jpeg");
+        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.png");
+        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.png");
+        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.png");
 
         if (caminhoImg != null) {
             ImageIcon icone = new ImageIcon(caminhoImg);
@@ -115,7 +115,7 @@ public class Tela_Cadastro extends javax.swing.JPanel {
         btSair = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(248, 250, 252));
+        setBackground(new java.awt.Color(204, 204, 204));
         setForeground(new java.awt.Color(248, 250, 252));
         setPreferredSize(new java.awt.Dimension(1000, 650));
 
@@ -319,7 +319,7 @@ public class Tela_Cadastro extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

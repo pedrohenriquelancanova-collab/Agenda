@@ -29,12 +29,12 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         setSize(1000, 650);
         setLocationRelativeTo(null);
-        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.jpeg");
-        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeAdicionar.jpeg");
+        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.png");
+        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeCadastro.png");
         java.net.URL iconeContato = getClass().getResource("/imagens/iconeContato.jpg");
-        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.jpeg");
-        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.jpeg");
-        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.jpeg");
+        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.png");
+        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.png");
+        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.png");
 
         if (caminhoImg != null) {
             ImageIcon icone = new ImageIcon(caminhoImg);
@@ -47,22 +47,46 @@ public class Tela_Principal extends javax.swing.JFrame {
             ImageIcon icone = new ImageIcon(iconeCadastro);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
+            ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btCadastro.setIcon(iconeFinal);
+            btCadastro2.setIcon(iconeFinal2);
+            btCadastro2.setText(
+                    "<html><font color='blue'>CADASTRAR CONTATO</font><br>"
+                    + "Adicionar novo Contato"
+                    + "</html>"
+            );
         }
 
         if (iconeContato != null) {
             ImageIcon icone = new ImageIcon(iconeContato);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
+            ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btConsultar.setIcon(iconeFinal);
+            btContatos2.setIcon(iconeFinal2);
+            btContatos2.setText(
+                    "<html><font color='green'>CONSULTAR CONTATOS</font><br>"
+                    + "Visualizar e buscar contatos"
+                    + "</html>"
+            );
 
         }
 
         if (iconeAlterar != null) {
             ImageIcon icone = new ImageIcon(iconeAlterar);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
+            ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btAlterar.setIcon(iconeFinal);
+            btAlterar2.setIcon(iconeFinal2);
+            btAlterar2.setText(
+                    "<html><font color='orange'>ALTERAR/REMOVER</font><br>"
+                    + "Editar ou remover contatos"
+                    + "</html>"
+            );
 
         }
 
@@ -70,10 +94,18 @@ public class Tela_Principal extends javax.swing.JFrame {
             ImageIcon icone = new ImageIcon(iconeSobreoSoftware);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
+            ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btSoftware.setIcon(iconeFinal);
+            btSoftware2.setIcon(iconeFinal2);
+            btSoftware2.setText(
+                    "<html><font color='purple'>SOBRE O SOFTWARE</font><br>"
+                    + "Informações do sistema"
+                    + "</html>"
+            );
 
         }
-        
+
         if (iconeSair != null) {
             ImageIcon icone = new ImageIcon(iconeSair);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
@@ -127,7 +159,8 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(248, 250, 252));
+        setBackground(new java.awt.Color(204, 204, 204));
+        setPreferredSize(new java.awt.Dimension(1000, 650));
 
         jPanel1.setBackground(new java.awt.Color(23, 37, 84));
 
@@ -210,7 +243,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                 .addComponent(btAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
                 .addComponent(btSair)
                 .addGap(22, 22, 22))
         );
@@ -222,7 +255,6 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel2.setText("AGENDA DE CONTATOS");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(100, 116, 139));
         jLabel3.setText("Gerencie seus contatos de forma simples e organizada");
 
         btCadastro2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -241,7 +273,6 @@ public class Tela_Principal extends javax.swing.JFrame {
         btSoftware2.addActionListener(this::btSoftware2ActionPerformed);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(100, 116, 139));
         jLabel4.setText("Bem-Vindo ao sistema de agenda de contatos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -249,7 +280,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(109, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -262,8 +293,10 @@ public class Tela_Principal extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btContatos2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btSoftware2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel4))
-                .addContainerGap(60, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(jLabel4)))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +315,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                     .addComponent(btSoftware2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
                 .addGap(42, 42, 42)
                 .addComponent(jLabel4)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -293,7 +326,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

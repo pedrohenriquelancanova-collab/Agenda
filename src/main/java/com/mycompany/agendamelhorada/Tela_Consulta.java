@@ -34,15 +34,15 @@ public class Tela_Consulta extends javax.swing.JPanel {
             Imagem.setIcon(iconeFinal);
         }
 
-        java.net.URL caminhoImg2 = getClass().getResource("/imagens/icone.jpeg");
-        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeAdicionar.jpeg");
+        java.net.URL caminhoImg2 = getClass().getResource("/imagens/icone.png");
+        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeCadastro.png");
         java.net.URL iconeContato = getClass().getResource("/imagens/iconeContato.jpg");
-        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.jpeg");
-        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.jpeg");
-        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.jpeg");
+        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.png");
+        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.png");
+        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.png");
 
         if (caminhoImg2 != null) {
-            ImageIcon icone = new ImageIcon(caminhoImg);
+            ImageIcon icone = new ImageIcon(caminhoImg2);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
             btInicio1.setIcon(iconeFinal);
@@ -287,7 +287,7 @@ public class Tela_Consulta extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setBackground(new java.awt.Color(248, 250, 252));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 650));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -346,14 +346,12 @@ public class Tela_Consulta extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(51, 102, 255));
         jLabel10.setText("CONTATO SELECIONADO");
 
-        textoSaidaNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoSaidaNome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         textoSaidaNome.setForeground(new java.awt.Color(51, 102, 255));
 
         textoSaidaEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textoSaidaEmail.setForeground(new java.awt.Color(51, 102, 255));
 
         textoSaidaTelefone.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textoSaidaTelefone.setForeground(new java.awt.Color(51, 102, 255));
 
         Imagem.setText("jLabel11");
 
@@ -363,13 +361,22 @@ public class Tela_Consulta extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textoSaidaNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textoSaidaEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textoSaidaTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 401, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(textoSaidaTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                                    .addComponent(textoSaidaEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(361, 361, 361)))
+                        .addComponent(Imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(textoSaidaNome, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -383,7 +390,7 @@ public class Tela_Consulta extends javax.swing.JPanel {
                 .addComponent(textoSaidaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textoSaidaTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -531,13 +538,10 @@ public class Tela_Consulta extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 12, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

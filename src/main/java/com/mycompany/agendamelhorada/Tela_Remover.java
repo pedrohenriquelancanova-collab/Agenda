@@ -25,12 +25,12 @@ public class Tela_Remover extends javax.swing.JPanel {
 
         carregarTabela();
 
-        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.jpeg");
-        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeAdicionar.jpeg");
+        java.net.URL caminhoImg = getClass().getResource("/imagens/icone.png");
+        java.net.URL iconeCadastro = getClass().getResource("/imagens/iconeCadastro.png");
         java.net.URL iconeContato = getClass().getResource("/imagens/iconeContato.jpg");
-        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.jpeg");
-        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.jpeg");
-        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.jpeg");
+        java.net.URL iconeAlterar = getClass().getResource("/imagens/iconeAlterar.png");
+        java.net.URL iconeSobreoSoftware = getClass().getResource("/imagens/iconeSobreoSoftware.png");
+        java.net.URL iconeSair = getClass().getResource("/imagens/iconeSair.png");
 
         if (caminhoImg != null) {
             ImageIcon icone = new ImageIcon(caminhoImg);
@@ -337,7 +337,7 @@ public class Tela_Remover extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setBackground(new java.awt.Color(248, 250, 252));
+        setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 650));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
