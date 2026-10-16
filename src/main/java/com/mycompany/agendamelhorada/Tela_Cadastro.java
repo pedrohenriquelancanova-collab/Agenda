@@ -125,7 +125,6 @@ public class Tela_Cadastro extends javax.swing.JPanel {
         jLabel2.setText("Cadastrar Contato");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(100, 116, 139));
         jLabel3.setText("Preencha os dados abaixo para adicionar um novo contato");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N

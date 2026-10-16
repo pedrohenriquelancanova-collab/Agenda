@@ -47,7 +47,7 @@ public class Tela_Principal extends javax.swing.JFrame {
             ImageIcon icone = new ImageIcon(iconeCadastro);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
-            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btCadastro.setIcon(iconeFinal);
             btCadastro2.setIcon(iconeFinal2);
@@ -62,7 +62,7 @@ public class Tela_Principal extends javax.swing.JFrame {
             ImageIcon icone = new ImageIcon(iconeContato);
             Image imagemRedimensionada = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal = new ImageIcon(imagemRedimensionada);
-            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(24, 24, Image.SCALE_SMOOTH);
+            Image imagemRedimensionada2 = icone.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
             ImageIcon iconeFinal2 = new ImageIcon(imagemRedimensionada2);
             btConsultar.setIcon(iconeFinal);
             btContatos2.setIcon(iconeFinal2);

@@ -346,7 +346,6 @@ public class Tela_Remover extends javax.swing.JPanel {
         jLabel7.setText("Alterar/ Remover Contato");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(100, 116, 139));
         jLabel8.setText("Selecione um contato na tabela para alterar ou remover");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
