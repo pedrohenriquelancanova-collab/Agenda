@@ -120,10 +120,21 @@ public class Tela_Remover extends javax.swing.JPanel {
         Arquivo arq = new Arquivo();
         String nome = textoNome1.getText();
 
-        if (arq.remover(nome)) {
-            JOptionPane.showMessageDialog(null, "Contato removido com sucesso!");
-        } else {
-            JOptionPane.showMessageDialog(null, "Contato não encontrado");
+        int resposta = JOptionPane.showConfirmDialog(
+                this, "Tem certeza que deseja remover este item?",
+                "Confirmar remoção",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+        );
+
+        if (resposta == JOptionPane.YES_OPTION) {
+
+            if (!arq.remover(nome)) {
+                JOptionPane.showMessageDialog(null, "Contato não encontrado");
+            } else {
+                JOptionPane.showMessageDialog(null, "Contato removido com sucesso!");
+                carregarTabela();
+            }
         }
     }
 

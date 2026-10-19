@@ -1,2 +1,2 @@
-Teste;teste@gmail.com;(55)999999999
-Teste3;teste2@gmail.com;(55)999999999
+Teste;Teste@gmail.com;(55)999999999
+Teste2;Teste@gmail.com;(55)999999999

@@ -84,6 +84,50 @@ public class Tela_Cadastro extends javax.swing.JPanel {
             btSair.setIcon(iconeFinal);
 
         }
+
+    }
+
+    private void salvarContato() {
+        String nome = textoNome.getText();
+        String email = textoEmail.getText();
+        String telefone = textoTelefone.getText();
+
+        if (nome.isBlank()) {
+            JOptionPane.showMessageDialog(null, "Digite o nome!");
+
+        }
+
+        if (!email.matches("^[\\w.-]+@[\\w.-]+\\.\\w+$")) {
+            JOptionPane.showMessageDialog(null, "E-mail inválido!");
+
+        }
+
+        if (!telefone.matches("\\(?\\d{2}\\)?\\s?9\\d{4}-?\\d{4}")) {
+            JOptionPane.showMessageDialog(null, "Celular inválido!");
+
+        } else {
+
+            Arquivo arq = new Arquivo();
+            String conteudo = arq.ler();
+            String[] linhas = conteudo.split("\n");
+
+            for (String linha : linhas) {
+                String[] dados = linha.split(";");
+
+                for (int j = 0; j < linhas.length; j += 3) {
+
+                    if (nome.equals(dados[j])) {
+                        JOptionPane.showMessageDialog(null, "Nome já existe, por favor modifique o nome!");
+                        return;
+                    }
+                }
+            }
+
+            Contato contato = new Contato(nome, email, telefone);
+            arq.gravar(contato);
+
+            JOptionPane.showMessageDialog(this, "Contato salvo com sucesso!");
+        }
     }
 
     /**
@@ -338,32 +382,7 @@ public class Tela_Cadastro extends javax.swing.JPanel {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-        String nome = textoNome.getText();
-        String email = textoEmail.getText();
-        String telefone = textoTelefone.getText();
-
-        if (nome.isBlank()) {
-            JOptionPane.showMessageDialog(null, "Digite o nome!");
-
-        }
-
-        if (!email.matches("^[\\w.-]+@[\\w.-]+\\.\\w+$")) {
-            JOptionPane.showMessageDialog(null, "E-mail inválido!");
-
-        }
-
-        if (!telefone.matches("\\(?\\d{2}\\)?\\s?9\\d{4}-?\\d{4}")) {
-            JOptionPane.showMessageDialog(null, "Celular inválido!");
-
-        } else {
-            Contato contato = new Contato(nome, email, telefone);
-
-            Arquivo arq = new Arquivo();
-
-            arq.gravar(contato);
-
-            JOptionPane.showMessageDialog(this, "Contato salvo com sucesso!");
-        }
+        salvarContato();
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void textoNomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textoNomeMouseClicked
