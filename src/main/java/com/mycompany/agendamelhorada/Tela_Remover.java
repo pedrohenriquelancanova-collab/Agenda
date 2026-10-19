@@ -127,6 +127,16 @@ public class Tela_Remover extends javax.swing.JPanel {
                 JOptionPane.WARNING_MESSAGE
         );
 
+        if (resposta == JOptionPane.NO_OPTION) {
+            JOptionPane.showMessageDialog(null, "Contato não removido!");
+            return;
+        }
+
+        if (resposta == JOptionPane.CLOSED_OPTION) {
+            JOptionPane.showMessageDialog(null, "Contato não removido!");
+            return;
+        }
+
         if (resposta == JOptionPane.YES_OPTION) {
 
             if (!arq.remover(nome)) {
@@ -136,6 +146,7 @@ public class Tela_Remover extends javax.swing.JPanel {
                 carregarTabela();
             }
         }
+
     }
 
     private void atualizarTabela() {
